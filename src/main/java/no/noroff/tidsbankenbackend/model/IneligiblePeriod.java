@@ -6,6 +6,9 @@ import lombok.Setter;
 
 import java.sql.Date;
 
+/**
+ * Hibernate method for creating SQL ineligible_period table
+ */
 @Entity
 @Getter
 @Setter
@@ -27,5 +30,6 @@ public class IneligiblePeriod {
     // Relationships
     //================================================================================
     @ManyToOne
+    @JoinColumn(nullable = false)
     private Users creator;
 }

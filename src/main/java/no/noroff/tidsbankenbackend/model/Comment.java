@@ -22,5 +22,10 @@ public class Comment {
     // Relationships
     //================================================================================
     @ManyToOne
+    @JoinColumn(nullable = false)
     private Users user;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private VacationRequest vacationRequest;
 }
